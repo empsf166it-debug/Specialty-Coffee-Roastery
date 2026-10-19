@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="beanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C58A52" />
+      <stop offset="60%" stop-color="#59382A" />
+      <stop offset="100%" stop-color="#2B1914" />
+    </linearGradient>
+    <linearGradient id="emberGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C58A52" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#E2A76F" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+  <!-- Background circular badge -->
+  <circle cx="50" cy="50" r="48" fill="#2B1914" stroke="#C58A52" stroke-width="1.5" />
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#C58A52" stroke-width="0.75" stroke-dasharray="3,2" opacity="0.6"/>
+  <!-- Stylized artisan coffee bean with warm roast ember split -->
+  <g transform="translate(50,50) rotate(-28) translate(-50,-50)">
+    <!-- Bean Body Left -->
+    <path d="M 50 18 C 30 18 20 34 20 50 C 20 66 30 82 50 82 C 45 70 42 58 46 50 C 50 42 46 28 50 18 Z" fill="url(#beanGrad)" />
+    <!-- Bean Body Right -->
+    <path d="M 50 18 C 70 18 80 34 80 50 C 80 66 70 82 50 82 C 55 70 52 58 48 50 C 44 42 48 28 50 18 Z" fill="url(#beanGrad)" />
+    <!-- Organic roast cleft ember stream -->
+    <path d="M 50 20 Q 42 36 49 50 Q 56 64 50 80" fill="none" stroke="url(#emberGlow)" stroke-width="2.8" stroke-linecap="round" />
+  </g>
+  <!-- Tiny subtle sparkle dots -->
+  <circle cx="50" cy="18" r="1.5" fill="#C58A52"/>
+  <circle cx="50" cy="82" r="1.5" fill="#C58A52"/>
+</svg>
