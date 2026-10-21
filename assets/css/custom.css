@@ -86,10 +86,17 @@ body {
 
 .steam-particle {
   position: absolute;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(246,240,230,0) 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(246,240,230,0) 70%);
   border-radius: 50%;
   pointer-events: none;
   animation: steamFloat 5s ease-in-out infinite;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .steam-particle {
+    display: block;
+  }
 }
 
 .steam-1 { width: 14px; height: 35px; left: 45%; animation-delay: 0s; }
