@@ -104,14 +104,19 @@
   </header>
 
   <!-- Mobile Drawer Menu -->
-  <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full sm:w-80 bg-cream border-l border-caramel/20 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8 shadow-2xl lg:hidden">
-    <div class="flex items-center justify-between pb-6 border-b border-espresso/10">
-      <div class="flex items-center space-x-3">
-        <div class="w-8 h-8 rounded-full bg-espresso flex items-center justify-center p-1">
-          <img src="assets/images/logo.svg" alt="EMBER & ORIGIN Logo" class="w-full h-full">
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full sm:w-80 h-full max-h-screen bg-cream border-l border-caramel/20 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-6 sm:p-8 shadow-2xl lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between pb-3 border-b border-espresso/10 shrink-0">
+      <a href="#hero" class="mobile-link flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-full bg-espresso flex items-center justify-center p-1 shadow-sm border border-caramel/40">
+          <img src="assets/images/logo.svg" alt="EMBER & ORIGIN Coffee Bean Monogram" class="w-full h-full object-contain">
         </div>
-        <span class="font-serif text-lg font-bold uppercase tracking-wider text-espresso">EMBER &amp; ORIGIN</span>
-      </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg font-bold tracking-wider leading-none uppercase text-espresso">
+            EMBER <span class="text-caramel font-light">&amp;</span> ORIGIN
+          </span>
+          <span class="text-[8px] tracking-[0.24em] uppercase font-semibold text-roasted/70 mt-0.5">Specialty Roastery</span>
+        </div>
+      </a>
       <button id="mobile-menu-close" type="button" class="p-2 text-espresso hover:text-caramel focus:outline-none" aria-label="Close menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -119,50 +124,26 @@
       </button>
     </div>
 
-    <nav class="flex flex-col space-y-4 my-auto py-6" aria-label="Mobile Navigation">
-      <a href="#hero" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">home</a>
-      <a href="#coffee-collection" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">coffee</a>
-      <a href="#origins" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">origins</a>
-      <a href="#roasting-craft" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">roast</a>
-      <a href="#brewing-experience" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">brewing</a>
-      <a href="#roastery-story" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">story</a>
-      <a href="#flavor-discovery" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">flavors</a>
-      <a href="#wholesale" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">wholesale</a>
-      <a href="#contact" class="mobile-link text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">contact</a>
-    </nav>
-
-    <div class="pt-6 border-t border-espresso/10">
-      <div class="flex items-center justify-center space-x-3 mb-4">
-        <!-- Instagram -->
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group w-9 h-9 rounded-full bg-espresso/5 border border-espresso/15 text-espresso flex items-center justify-center transition-all duration-300 hover:text-white hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:border-transparent hover:scale-110 shadow-sm" aria-label="Follow EMBER & ORIGIN on Instagram">
-          <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-          </svg>
-        </a>
-        <!-- Threads -->
-        <a href="https://threads.net" target="_blank" rel="noopener noreferrer" class="social-icon-btn group w-9 h-9 rounded-full bg-espresso/5 border border-espresso/15 text-espresso flex items-center justify-center transition-all duration-300 hover:text-white hover:bg-black hover:border-transparent hover:scale-110 shadow-sm" aria-label="Follow EMBER & ORIGIN on Threads">
-          <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.25 18.29 1.5 15.424 1.5 11.968c0-3.542.846-6.425 2.515-8.57C5.772 1.134 8.629 0 12.193 0c3.559 0 6.427 1.132 8.172 3.364 1.678 2.146 2.525 5.029 2.525 8.571v.831c0 .414-.336.75-.75.75h-3.424c-.414 0-.75-.336-.75-.75v-.831c0-2.748-.604-4.887-1.795-6.357-1.229-1.517-3.232-2.318-5.978-2.318-2.736 0-4.735.8-5.942 2.378C3.593 7.155 3 9.294 3 11.968c0 2.748.595 4.908 1.768 6.421 1.207 1.558 3.204 2.373 5.936 2.423 2.155.039 3.993-.518 5.464-1.657.48-.372 1.16-.307 1.557.147.411.472.355 1.18-.124 1.589-1.921 1.637-4.382 2.404-7.415 2.359v-.25zm3.433-11.834c-.234-.149-.526-.145-.756.012-.663.452-1.588.69-2.753.707-1.42.022-2.525-.371-3.284-1.169-.745-.783-1.14-1.923-1.14-3.298 0-1.424.405-2.585 1.171-3.358.784-.791 1.916-1.193 3.368-1.193 1.488 0 2.628.397 3.389 1.18.736.758 1.127 1.905 1.163 3.411.009.414-.319.757-.733.766-.414.01-.758-.318-.767-.732-.03-1.143-.306-1.956-.82-2.485-.504-.519-1.32-.782-2.432-.782-1.077 0-1.895.275-2.431.816-.549.554-.838 1.423-.838 2.508 0 1.054.28 1.909.81 2.472.545.578 1.391.865 2.514.853.978-.01 1.766-.217 2.342-.614.348-.24.823-.178 1.097.14.281.328.23.823-.117 1.124-1.122.973-2.531 1.484-4.072 1.474-1.802-.012-3.197-.565-4.148-1.644-1.007-1.143-1.537-2.736-1.537-4.606 0-1.879.528-3.483 1.528-4.639.99-1.145 2.42-1.748 4.25-1.748 1.838 0 3.267.593 4.247 1.763.957 1.142 1.464 2.748 1.467 4.646.002.392-.298.717-.687.744z"/>
-          </svg>
-        </a>
-        <!-- X / Twitter -->
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group w-9 h-9 rounded-full bg-espresso/5 border border-espresso/15 text-espresso flex items-center justify-center transition-all duration-300 hover:text-white hover:bg-[#0f1419] hover:border-transparent hover:scale-110 shadow-sm" aria-label="Follow EMBER & ORIGIN on X">
-          <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <!-- YouTube -->
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn group w-9 h-9 rounded-full bg-espresso/5 border border-espresso/15 text-espresso flex items-center justify-center transition-all duration-300 hover:text-white hover:bg-[#FF0000] hover:border-transparent hover:scale-110 shadow-sm" aria-label="Watch EMBER & ORIGIN on YouTube">
-          <svg class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <nav class="flex flex-col space-y-2 py-3 shrink-0" aria-label="Mobile Navigation">
+      <a href="#hero" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">home</a>
+      <a href="#coffee-collection" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">coffee</a>
+      <a href="#origins" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">origins</a>
+      <a href="#roasting-craft" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">roast</a>
+      <a href="#brewing-experience" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">brewing</a>
+      <a href="#roastery-story" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">story</a>
+      <a href="#flavor-discovery" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">flavors</a>
+      <a href="#wholesale" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">wholesale</a>
+      <a href="#contact" class="mobile-link text-sm sm:text-base lowercase tracking-normal font-medium text-espresso hover:text-caramel transition-colors">contact</a>
+      <div class="pt-2">
+        <a href="#coffee-collection" class="mobile-link flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] bg-caramel text-espresso hover:bg-espresso hover:text-cream shadow-md transition-all duration-300">
+          <span>Explore Coffee</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
       </div>
-      <a href="#coffee-collection" class="mobile-link block w-full text-center py-3 rounded-full text-xs font-semibold uppercase tracking-widest bg-espresso text-cream hover:bg-caramel transition-colors">
-        Explore Coffee
-      </a>
-      <p class="text-[11px] text-center text-roasted/70 mt-4 tracking-wider">Small-Batch Roasted · Traceable Origins</p>
-    </div>
+    </nav>
+
   </div>
 
 
@@ -213,14 +194,14 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-            <a href="#coffee-collection" class="group px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-caramel text-espresso hover:bg-cream hover:text-espresso transition-all duration-300 shadow-xl hover:shadow-caramel/30 flex items-center justify-center gap-3">
+            <a href="#coffee-collection" class="group w-full sm:w-60 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-caramel text-espresso hover:bg-cream hover:text-espresso transition-all duration-300 shadow-xl hover:shadow-caramel/30 flex items-center justify-center gap-3">
               <span>Explore Our Coffee</span>
               <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
 
-            <a href="#roastery-story" class="px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] text-cream border border-cream/30 hover:border-caramel hover:text-caramel bg-espresso/40 backdrop-blur-sm transition-all duration-300 text-center">
+            <a href="#roastery-story" class="w-full sm:w-60 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] text-cream border border-cream/30 hover:border-caramel hover:text-caramel bg-espresso/40 backdrop-blur-sm transition-all duration-300 text-center flex items-center justify-center">
               Discover Our Story
             </a>
           </div>
@@ -311,9 +292,9 @@
 
             <!-- Roast Profile Bar -->
             <div class="space-y-2 pt-2">
-              <div class="flex justify-between text-xs font-semibold uppercase tracking-wider text-espresso">
-                <span>Roast Level</span>
-                <span class="text-caramel">Medium (City+)</span>
+              <div class="flex items-baseline justify-between gap-2 text-xs font-semibold uppercase tracking-wider text-espresso">
+                <span class="shrink-0">Roast Level</span>
+                <span class="text-caramel text-right text-[11px] sm:text-xs">Medium (City+)</span>
               </div>
               <div class="h-2 w-full bg-cream rounded-full overflow-hidden p-0.5 border border-border-light">
                 <div class="h-full bg-gradient-to-r from-caramel to-roasted rounded-full w-[60%]"></div>
@@ -379,9 +360,9 @@
 
             <!-- Roast Profile Bar -->
             <div class="space-y-2 pt-2">
-              <div class="flex justify-between text-xs font-semibold uppercase tracking-wider text-espresso">
-                <span>Roast Level</span>
-                <span class="text-caramel">Light (Cinnamon / New England)</span>
+              <div class="flex items-baseline justify-between gap-2 text-xs font-semibold uppercase tracking-wider text-espresso">
+                <span class="shrink-0">Roast Level</span>
+                <span class="text-caramel text-right text-[11px] sm:text-xs">Light (Cinnamon / New England)</span>
               </div>
               <div class="h-2 w-full bg-cream rounded-full overflow-hidden p-0.5 border border-border-light">
                 <div class="h-full bg-gradient-to-r from-caramel to-amber-600 rounded-full w-[35%]"></div>
@@ -429,9 +410,9 @@
 
             <!-- Roast Profile Bar -->
             <div class="space-y-2 pt-2">
-              <div class="flex justify-between text-xs font-semibold uppercase tracking-wider text-espresso">
-                <span>Roast Level</span>
-                <span class="text-caramel">Dark (Vienna Roast)</span>
+              <div class="flex items-baseline justify-between gap-2 text-xs font-semibold uppercase tracking-wider text-espresso">
+                <span class="shrink-0">Roast Level</span>
+                <span class="text-caramel text-right text-[11px] sm:text-xs">Dark (Vienna Roast)</span>
               </div>
               <div class="h-2 w-full bg-cream rounded-full overflow-hidden p-0.5 border border-border-light">
                 <div class="h-full bg-gradient-to-r from-roasted to-espresso-dark rounded-full w-[88%]"></div>
@@ -478,7 +459,7 @@
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
       
       <!-- Section Title & Origin Map Infographic Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-24 gap-6" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 sm:mb-24 gap-6" data-aos="fade-up">
         <div class="max-w-2xl">
           <div class="inline-flex items-center gap-2 text-sage-dark uppercase tracking-[0.22em] text-xs font-semibold mb-3">
             <span class="w-8 h-[1px] bg-sage"></span>
@@ -493,15 +474,15 @@
         </div>
 
         <!-- Illustrated Origin Coordinates Badge -->
-        <div class="p-6 rounded-2xl bg-ivory border border-border-light shadow-sm flex items-center gap-5">
-          <div class="w-12 h-12 rounded-full bg-sage-light flex items-center justify-center text-sage-dark">
+        <div class="p-5 sm:p-6 rounded-2xl bg-ivory border border-border-light shadow-sm flex items-center gap-4 sm:gap-5 shrink-0 self-start lg:self-auto max-w-full">
+          <div class="w-12 h-12 rounded-full bg-sage-light flex items-center justify-center text-sage-dark shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
           <div>
-            <span class="text-xs uppercase tracking-widest font-semibold text-espresso block">The Bean Belt Traverse</span>
-            <span class="text-xs text-roasted/70">Ethiopia · Colombia · Guatemala</span>
+            <span class="text-xs uppercase tracking-widest font-semibold text-espresso block whitespace-nowrap">The Bean Belt Traverse</span>
+            <span class="text-xs text-roasted/70 whitespace-normal sm:whitespace-nowrap">Ethiopia · Colombia · Guatemala</span>
           </div>
         </div>
       </div>
@@ -1132,14 +1113,14 @@
               “EMBER &amp; ORIGIN provides the most thermally consistent green coffee roast development I’ve dialed in. The Highland lot’s floral aromatics are genuinely breathtaking on a calibrated flat-burr grinder.”
             </blockquote>
           </div>
-          <div class="flex items-center gap-4 mt-8 pt-6 border-t border-border-light">
+          <div class="flex items-center gap-3 sm:gap-4 mt-8 pt-6 border-t border-border-light">
             <div class="w-12 h-12 rounded-full overflow-hidden bg-cream flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop" alt="Portrait of barista Maya Lin" class="w-full h-full object-cover">
             </div>
-            <div>
+            <div class="min-w-0">
               <h4 class="font-serif text-base font-bold text-espresso leading-none">Maya Lin</h4>
-              <p class="text-xs text-caramel font-semibold mt-1">Head Barista · Atelier 99</p>
-              <p class="text-[11px] text-roasted/60 mt-0.5">Favorite: Highland Single Origin</p>
+              <p class="text-[11px] xl:text-xs text-caramel font-semibold mt-1 truncate">Head Barista · Atelier 99</p>
+              <p class="text-[11px] text-roasted/60 mt-0.5 truncate">Favorite: Highland Single Origin</p>
             </div>
           </div>
         </div>
@@ -1154,20 +1135,20 @@
               “Receiving the Sunrise Blend weekly transformed our entire weekend morning rhythm. The chocolate balance and zero harsh bitterness make it impossible to go back to standard commercial beans.”
             </blockquote>
           </div>
-          <div class="flex items-center gap-4 mt-8 pt-6 border-t border-cream/15">
+          <div class="flex items-center gap-3 sm:gap-4 mt-8 pt-6 border-t border-cream/15">
             <div class="w-12 h-12 rounded-full overflow-hidden bg-espresso-dark flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="Portrait of coffee enthusiast Marcus Reed" class="w-full h-full object-cover">
             </div>
-            <div>
+            <div class="min-w-0">
               <h4 class="font-serif text-base font-bold text-cream leading-none">Marcus Reed</h4>
-              <p class="text-xs text-caramel-light font-semibold mt-1">Home Chemex Brewer</p>
-              <p class="text-[11px] text-cream/60 mt-0.5">Favorite: Sunrise Signature Blend</p>
+              <p class="text-[11px] xl:text-xs text-caramel-light font-semibold mt-1 truncate">Home Chemex Brewer</p>
+              <p class="text-[11px] text-cream/60 mt-0.5 truncate">Favorite: Sunrise Signature Blend</p>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 3: Café Partner (Centered on md tablet view) -->
-        <div class="p-8 sm:p-10 rounded-3xl bg-cream/40 border border-border-light shadow-warm flex flex-col justify-between hover:shadow-hover transition-all duration-300 md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto md:w-full lg:max-w-none" data-aos="fade-up" data-aos-delay="300">
+        <!-- Testimonial 3: Café Partner (Centered on md tablet view with identical width) -->
+        <div class="p-8 sm:p-10 rounded-3xl bg-cream/40 border border-border-light shadow-warm flex flex-col justify-between hover:shadow-hover transition-all duration-300 md:col-span-2 lg:col-span-1 md:w-[calc(50%-1rem)] md:mx-auto lg:w-full" data-aos="fade-up" data-aos-delay="300">
           <div>
             <div class="flex items-center gap-1 text-caramel mb-6">
               ★★★★★
@@ -1176,14 +1157,14 @@
               “Their wholesale team didn’t just drop off roasted bags — they spent half a day calibrating our La Marzocco and training our staff. Our flat white volume surged 40% in two months.”
             </blockquote>
           </div>
-          <div class="flex items-center gap-4 mt-8 pt-6 border-t border-border-light">
+          <div class="flex items-center gap-3 sm:gap-4 mt-8 pt-6 border-t border-border-light">
             <div class="w-12 h-12 rounded-full overflow-hidden bg-cream flex-shrink-0">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop" alt="Portrait of cafe owner Elena Rostova" class="w-full h-full object-cover">
             </div>
-            <div>
+            <div class="min-w-0">
               <h4 class="font-serif text-base font-bold text-espresso leading-none">Elena Rostova</h4>
-              <p class="text-xs text-caramel font-semibold mt-1">Owner · St. Jude Bakery &amp; Café</p>
-              <p class="text-[11px] text-roasted/60 mt-0.5">Favorite: Midnight Espresso Reserve</p>
+              <p class="text-[11px] xl:text-xs text-caramel font-semibold mt-1 whitespace-nowrap">Owner · St. Jude Bakery &amp; Café</p>
+              <p class="text-[11px] text-roasted/60 mt-0.5 truncate">Favorite: Midnight Espresso Reserve</p>
             </div>
           </div>
         </div>
@@ -1195,17 +1176,17 @@
         <div class="text-center mb-6">
           <span class="text-[11px] tracking-[0.25em] uppercase text-roasted/70 font-semibold">Moments Around the Roastery &amp; Cup</span>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-4">
-          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-48 md:h-56 shadow-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-56 md:h-64 lg:h-56 shadow-sm">
             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop" alt="Pouring latte art in artisan ceramic cup" class="w-full h-full object-cover">
           </div>
-          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-48 md:h-56 shadow-sm">
+          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-56 md:h-64 lg:h-56 shadow-sm">
             <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=600&auto=format&fit=crop" alt="Fresh espresso extraction pouring with golden crema" class="w-full h-full object-cover">
           </div>
-          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-48 md:h-56 shadow-sm">
+          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-56 md:h-64 lg:h-56 shadow-sm">
             <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=600&auto=format&fit=crop" alt="Roasted coffee beans cooling in stainless tray" class="w-full h-full object-cover">
           </div>
-          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-48 md:h-56 shadow-sm">
+          <div class="rounded-2xl overflow-hidden img-zoom-container h-64 sm:h-56 md:h-64 lg:h-56 shadow-sm">
             <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=600&auto=format&fit=crop" alt="Cozy wooden cafe corner with filter coffee and magazine" class="w-full h-full object-cover">
           </div>
         </div>
@@ -1413,10 +1394,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-            <a href="#wholesale" class="px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-caramel text-espresso hover:bg-cream hover:text-espresso transition-all duration-300 text-center shadow-lg">
+            <a href="#wholesale" class="w-full sm:w-52 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-caramel text-espresso hover:bg-cream hover:text-espresso transition-all duration-300 text-center shadow-lg flex items-center justify-center">
               Get in Touch
             </a>
-            <a href="#coffee-collection" class="px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] text-cream border border-cream/30 hover:border-caramel hover:text-caramel bg-espresso/50 backdrop-blur-sm transition-all duration-300 text-center">
+            <a href="#coffee-collection" class="w-full sm:w-52 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.18em] text-cream border border-cream/30 hover:border-caramel hover:text-caramel bg-espresso/50 backdrop-blur-sm transition-all duration-300 text-center flex items-center justify-center">
               Browse Roasts
             </a>
           </div>
@@ -1425,51 +1406,57 @@
       </div>
 
       <!-- Roastery Visit, Coordinates & Contact Info Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch" data-aos="fade-up">
         
-        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm space-y-3">
-          <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h4 class="font-serif text-xl font-bold text-espresso">Roastery &amp; Tasting Lab</h4>
+            <p class="text-xs text-roasted/80 leading-relaxed font-light">
+              442 Roastery Lane, Artisan Quarter<br>
+              Portland, Oregon 97209, USA
+            </p>
           </div>
-          <h4 class="font-serif text-xl font-bold text-espresso">Roastery &amp; Tasting Lab</h4>
-          <p class="text-xs text-roasted/80 leading-relaxed font-light">
-            442 Roastery Lane, Artisan Quarter<br>
-            Portland, Oregon 97209, USA
-          </p>
-          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-2">Sample Location</span>
+          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-4 mt-auto">Sample Location</span>
         </div>
 
-        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm space-y-3">
-          <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="font-serif text-xl font-bold text-espresso">Tasting Room Hours</h4>
+            <p class="text-xs text-roasted/80 leading-relaxed font-light">
+              Monday – Friday: 07:00 – 17:00<br>
+              Saturday &amp; Sunday: 08:00 – 16:00<br>
+              Public Cupping: Saturdays at 10:30
+            </p>
           </div>
-          <h4 class="font-serif text-xl font-bold text-espresso">Tasting Room Hours</h4>
-          <p class="text-xs text-roasted/80 leading-relaxed font-light">
-            Monday – Friday: 07:00 – 17:00<br>
-            Saturday &amp; Sunday: 08:00 – 16:00<br>
-            Public Cupping: Saturdays at 10:30
-          </p>
-          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-2">Walk-ins Welcome</span>
+          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-4 mt-auto">Walk-ins Welcome</span>
         </div>
 
-        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm space-y-3 md:col-span-2 lg:col-span-1 md:max-w-md md:mx-auto md:w-full lg:max-w-none">
-          <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
+        <div class="p-8 rounded-2xl bg-cream/40 border border-border-light shadow-sm flex flex-col justify-between md:col-span-2 lg:col-span-1 md:w-[calc(50%-1rem)] md:mx-auto lg:w-full">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-caramel/20 text-caramel flex items-center justify-center mb-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h4 class="font-serif text-xl font-bold text-espresso">Direct Inquiries</h4>
+            <p class="text-xs text-roasted/80 leading-relaxed font-light">
+              hello@emberorigin-roastery.demo<br>
+              wholesale@emberorigin-roastery.demo<br>
+              +1 (503) 555-0194
+            </p>
           </div>
-          <h4 class="font-serif text-xl font-bold text-espresso">Direct Inquiries</h4>
-          <p class="text-xs text-roasted/80 leading-relaxed font-light">
-            hello@emberorigin-roastery.demo<br>
-            wholesale@emberorigin-roastery.demo<br>
-            +1 (503) 555-0194
-          </p>
-          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-2">Placeholder Contacts</span>
+          <span class="inline-block text-[11px] text-caramel font-semibold uppercase tracking-wider pt-4 mt-auto">Placeholder Contacts</span>
         </div>
 
       </div>
@@ -1600,14 +1587,9 @@
 
       </div>
 
-      <!-- Bottom Row: Copyright, Legal Policies & Back to Top -->
-      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-cream/50 gap-4">
+      <!-- Bottom Row: Copyright & Back to Top -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-cream/50 gap-4">
         <p>&copy; 2026 EMBER &amp; ORIGIN Artisan Coffee Roastery Co. All rights reserved.</p>
-        <div class="flex flex-wrap items-center justify-center gap-6">
-          <a href="#contact" class="hover:text-caramel transition-colors">Privacy Policy</a>
-          <a href="#contact" class="hover:text-caramel transition-colors">Terms of Craft Service</a>
-          <a href="#wholesale" class="hover:text-caramel transition-colors">Wholesale Sourcing Agreement</a>
-        </div>
         <!-- Back to Top Arrow Button (Icon Only) -->
         <a href="#hero" id="footer-back-to-top" class="w-10 h-10 rounded-full bg-cream/10 hover:bg-caramel text-cream hover:text-espresso transition-all duration-300 border border-cream/15 hover:border-caramel flex items-center justify-center group shadow-sm hover:scale-105" aria-label="Back to top" title="Back to top">
           <svg class="w-4 h-4 stroke-current transition-transform duration-300 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5">
